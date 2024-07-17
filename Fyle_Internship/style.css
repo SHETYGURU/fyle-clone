@@ -1,0 +1,449 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.text-section {
+    max-width: 50%;
+    margin: auto 0;
+}
+
+.image-section {
+    max-width: 50%;
+    margin: auto 0;
+}
+
+.image-section img {
+    transform: scale(1);
+    transform-origin: top left;
+    border-radius: 10px;
+}
+
+.award-text {
+    color: #f36;
+    font-weight: bold;
+}
+
+.contact-button {
+    margin-top: 20px;
+}
+
+.button1 {
+    --color: #f36;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.button1:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.button1:hover {
+    color: #fff;
+}
+
+.button1:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.button1:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.button1:active:before {
+    background: #f90808;
+    transition: background 0s;
+}
+
+.modal-dialog {
+    max-width: 700px;
+    margin: 30vh auto;
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    padding: 20px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover .hover-overlay {
+    opacity: 1;
+}
+
+.read-more {
+    background-color: #f36;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    background-color: #d11e1e;
+    color: white;
+    text-decoration: none;
+}
+
+.project-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-image {
+    width: 55%;
+    padding-left: 3%;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+}
+
+.project-list {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-item {
+    cursor: pointer;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.project-item:hover, .project-item.active {
+    background-color: #f0f0f0;
+}
+
+.project-item.active {
+    background-color: #f36;
+    color: #fff;
+}
+
+.growth-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.growth-section .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.growth-section .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 10%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.why-we-are-best {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.why-we-are-best .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-we-are-best .col-md-3 {
+    padding: 20px;
+    text-align: center;
+}
+
+.why-we-are-best img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.why-we-are-best h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.why-we-are-best p {
+    font-size: 14px;
+    color: #777;
+}
+
+.button2 {
+    position: relative;
+    width: 4em;
+    height: 4em;
+    border: none;
+    background: rgba(180, 83, 107, 0.11);
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+.X {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 1.5px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 1.5px;
+    background-color: #fff;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+    position: absolute;
+    display: flex;
+    padding: 0.8rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    top: -70%;
+    left: 50%;
+    width: 3em;
+    height: 1.7em;
+    font-size: 12px;
+    background-color: rgb(19, 22, 24);
+    color: rgb(187, 229, 236);
+    border: none;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.button2:hover {
+    background-color: rgb(211, 21, 21);
+}
+
+.button2:active {
+    background-color: rgb(130, 0, 0);
+}
+
+.button2:hover > .close {
+    animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+    100% {
+        opacity: 1;
+    }
+}
+
+.centered-container {
+    text-align: center;
+}
+
+.award-text {
+    color: #f36;
+    margin: 0;
+    padding: 0;
+}
+
+.display-4 {
+    font-size: large;
+    margin: 0;
+    padding: 0;
+}
+.what-we-do-section {
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 0; /* Remove gaps between the images */
+}
+
+.service-item {
+    position: relative;
+    flex: 0 0 33.33%; /* Each image takes up 33.33% of the container's width */
+}
+
+.service-image {
+    width: 100%; /* The image takes up the full width of the service-item */
+    height: auto;
+    transition: opacity 2s ease;
+    padding: 50px;
+    border-radius: 10px; /* Add curved edges */
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 100px); /* Adjust width to account for padding */
+    height: calc(100% - 100px); /* Adjust height to account for padding */
+    margin: 50px; /* Match the padding of the image */
+    background: #f36; /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Match the border-radius of the image */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-item:hover .service-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+}
+
+.overlay-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.overlay-content p {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.read-more-link {
+    background-color: white;
+    color: #f36;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more-link:hover {
+    background-color: white;
+    color: #f36;
+}
+
+.dots-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Adjust this value to control the space between the image and the dots */
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+    background-color: #f36;
+}
+
+.dot.active {
+    background-color: #f36;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the elements horizontally */
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the text container */
+}
+
+.award-text {
+    order: 1; /* Ensure h5 appears first */
+    font-size: medium;
+    margin-bottom: 10px; /* Add space between h5 and h1 */
+}
+
+.display-4 {
+    order: 2; /* Ensure h1 appears second */
+    font-size: xxx-large;
+    margin-bottom: 10px; /* Add space between h1 and p */
+}
+
+.text-container p {
+    order: 3; /* Ensure p appears third */
+    margin: 0;
+}
